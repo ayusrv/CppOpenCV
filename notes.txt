@@ -1,0 +1,22 @@
+DIGITAL IMAGE SAMPLING->
+Digital image sampling and quantization are fundamental processes in digital image processing used to convert continuous analog signals (such as light intensity in the case of images) into discrete digital signals that can be processed and stored by computers.
+
+1) Sampling: In the context of digital images, sampling refers to the process of converting a continuous image into a discrete form by selecting a finite number of points or samples from the continuous image. This is typically done on a grid, where each sample represents the intensity of light (or color) at a particular location in the image. The grid is composed of pixels, and the resolution of the image is determined by the number of pixels in each dimension (e.g., width and height).
+
+2) Quantization: Quantization is the process of converting the sampled continuous values (which are typically represented by analog voltages or intensities) into discrete digital values. In the context of digital images, this means assigning a finite number of digital values (usually integers) to represent the intensity levels of each pixel. For example, in an 8-bit grayscale image, each pixel can have 256 possible intensity levels ranging from 0 (black) to 255 (white). In a color image, each color channel (e.g., red, green, and blue) is quantized independently.
+
+IMAGE FORMAT->
+An image format is a standardized way of storing and encoding digital images. Different image formats have different characteristics, including compression methods, color depth, transparency support, and metadata capabilities. Here are some common image formats:
+
+1) JPEG (Joint Photographic Experts Group): JPEG is one of the most common image formats used for photographs and complex images on the web. It uses lossy compression, which means some image quality is sacrificed to achieve smaller file sizes. JPEG supports millions of colors and is widely supported by web browsers and image editing software.
+
+2) PNG (Portable Network Graphics): PNG is a popular image format for images with transparent backgrounds or sharp edges, such as logos and graphics. It uses lossless compression, which means no image data is lost during compression. PNG supports millions of colors and is widely supported for web use and graphic design.
+
+3) GIF (Graphics Interchange Format): GIF is commonly used for simple animations and images with limited color palettes, such as icons and animated memes. GIF uses lossless compression but supports a maximum of 256 colors per image. It also supports transparency and animation, making it suitable for simple web graphics.
+
+4) TIFF (Tagged Image File Format): TIFF is a flexible image format commonly used in professional photography and printing. It supports lossless compression, multiple layers, and various color spaces and bit depths. TIFF files tend to be larger than JPEG or PNG files but offer higher image quality and more features.
+
+5) BMP (Bitmap): BMP is a simple image format used primarily in Windows environments. It stores uncompressed image data, resulting in large file sizes compared to other formats. BMP files are commonly used for storing raw image data or for compatibility with legacy systems.
+
+6) SVG (Scalable Vector Graphics): SVG is an XML-based vector image format commonly used for web graphics and scalable icons. Unlike raster formats like JPEG and PNG, SVG images are composed of mathematical shapes and can be scaled to any size without losing quality. SVG files are typically smaller in size and ideal for responsive web design.
+

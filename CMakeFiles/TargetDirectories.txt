@@ -1,0 +1,3 @@
+/home/kpit/test/CMakeFiles/rebuild_cache.dir
+/home/kpit/test/CMakeFiles/edit_cache.dir
+/home/kpit/test/CMakeFiles/cvtest.dir
