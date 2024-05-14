@@ -1,0 +1,7 @@
+ptr    [0X100H]
+        0X11H
+
+name = ptr
+content = 0X100H
+size = 8 bytes 
+address = 0X11H

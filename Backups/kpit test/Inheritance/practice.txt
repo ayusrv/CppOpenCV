@@ -1,0 +1,21 @@
+Create a base class sem1 and base class sem2 derive a class called result class
+sem1 contain marks as data member and display also
+sem2 contain marks2 as data member and display also 
+result class will have displau the total marks and compare will compare sem1 and sem2 
+
+
+create class employee with
+one pure with one pure virtual function called income tax
+create derived classes like class engineer, manager, accountant and override the incometax function
+all derived classes will have empno, sal fileds.
+for engineer incometax=10% of sal
+for manager incometax=15% of sal
+for accountant income tax=5%of sal
+display the empno and sal who is paying highest income tax.
+
+create class employee with id(int), name(string) birthdate date and 
+designation enum list {cleark, manager, engineer}, sal float
+create a list of 3 customer and display their details in the 
+asending order of their salary
+
+#dynamic cast exception, RTTI, DYNAMIC_CAST OPERATOR

@@ -1,0 +1,11 @@
+Time Complexity
+//Liner search 
+operation : Access item and compare
+N : size of element to be checked 
+Time complexity : O(N)
+TIme complexity is also consered about how many operations per input element
+
+step1: Always find relaiton between N (number) of input items and operation where "operation" is context specific
+
+e.g in linear search operation is "access element and compare"
+in binary search, check middle, if found okay else divide 

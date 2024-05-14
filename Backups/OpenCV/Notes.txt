@@ -1,0 +1,38 @@
+OPEN CV 
+
+Image processing and Computer vision
+    i) Image formation (image formation is always in reverse way)
+   ii) pinhole camera and perspective camera   
+
+Digital Image
+    i) Sampling -> a spatial resolution -> continious image project onto a sensor array
+   ii) Quantization -> number of grey levels -> result of image sampling and quantization
+    camera level depends on level of quantization
+    after quantization for every shade some specific color and color is saved and there will be lets say 8x8 matrix so 256 shades 0-255 and each block will be assigned with some block of color. More the shade more the quality
+
+Computer vision -> Field of computer science that focuses on enabling computer to identify and understand objects and people in images and videos 
+
+Computer vision capabilities
+    i) Object classification
+   ii) Object Identification
+  iii) Object tracking
+   iv) Object character recognition
+
+Computer vision in Automobile
+    Collision avoidance, 
+    Lane departure warning, 
+    Traffic sign recognition, 
+    Adaptive cruise control, 
+    Localization and mapping, 
+    Path planning, 
+    Sensor fusion cameras, LiDar
+    Parking assistance, 
+    Driver monitoring, 
+    Night vision enhancement, 
+    Traffic management
+
+CV Benifits
+    Automate several tasks,
+    Faster and simpler process,
+    Better products and services,
+    Cost reduction

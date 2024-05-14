@@ -1,0 +1,92 @@
+*************************************************************************************************************
+
+seguay : A smooth transition
+ 
+[101 | "Rohan" | 87000.0f | "Developer"]
+[204 | "Ajay" | 7000.0f | "Tester"]
+[809 | "Harshit" | 77000.0f | "Trainer"]
+
+*************************************************************************************************************
+
+option 1 : store object in fixed size container with fixed size container with contigious storage 
+    Benifits : 1) Random access 
+               2) easy to find next and previous
+               3) no tension of resize or change in length
+    
+    Answer : Array data sturecture
+    CPP Implementation :: std::arrar<T,N. /////>
+
+    Note :
+        1) An array of size n when declared, immediately reserves space for n items this means, n defaults constructiona will happen at the time of declaration
+
+*************************************************************************************************************
+
+option 2 : store objects dynamically resizable conatiner h=which can be used like an array with reservation for elements or by pushing when requires and resize if necessary
+
+    Benifits: 1) You can resize the conatianer during runtime of a programmer
+              2) You can access index via randomy
+
+    Answer : Vector arrangement 
+    CPP Implementation : std::vector<T, ///(allocator)////>
+
+    Note : 
+        1) If you add elements beyound capacity vector has to readjust.
+            Sometimes vector cannot expand adjacent to its boundary.
+            In such cases, a complete shift of data happens
+
+*************************************************************************************************************
+
+Option 3 : store data anywhere in ram as long as I fetch can fetch it when I want it. Data item should be "linked" to each other.
+
+    Answer : linked list 
+    CPP Implementation : std::forward_list : (singly linked list)
+                         std::list : (doubly linked list)
+
+*************************************************************************************************************
+
+OPtion 4 : Hashing
+
+[101 | "Rohan" | 87000.0f | "Developer"]
+[102 | "Ajay" | 7000.0f | "Tester"]
+[809 | "Harshit" | 77000.0f | "Trainer"]
+
+TAG:                            Value 
+809:                [809 | "Harshit" | 77000.0f | "Trainer"]
+
+//fix a mathametical way of finding where to put data [which row?]
+// we can use the same mathemetical formula to determine 
+// where my data is when I need to read it later!
+
+//formula [HASH function] modulus 9
+a) 101%9 = 2//row2, result of modulas 9 is the hash value/ it helps you to choose the row number
+b) 102%9 = 3 //row 3
+
+// 9 items 
+
+ Key       VALUE
+[   ]  [           ]  row[0]
+[   ]  [           ]  row[1]
+[101]  [101 | "Rohan" | 87000.0f | "Developer"]  row[2]
+[102]  [102 | "Ajay" | 7000.0f | "Tester"]  row[3]
+[   ]  [           ]  row[4]
+[   ]  [           ]  row[5]
+[   ]  [           ]  row[6]
+[   ]  [           ]  row[7]
+[   ]  [           ]  row[8]
+
+//infinite data in future 
+//find the salary of the employee whose employee ID is 102
+102%9 = 3 means data is on the row[3] TC reduced to o(n) to o(1)
+
+
+[11 | 12 | 10 | 20 | 30 | 40 | 50]
+mod 7
+
+row 2----> 30
+row 3----> 10
+row 4----> 11
+row 5----> 12 ----> 40
+row 6----> 20
+
+time complexity : O(1)
+average case : Amortized O(1)

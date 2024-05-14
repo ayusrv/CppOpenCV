@@ -1,0 +1,21 @@
+Function Pointer -> 
+
+void square(int num){
+    std::cout<<num*num;
+}
+
+void cube(int num){
+    std::cout<<num*num*num;
+}
+
+int main(){
+    std::function<void(int)> fn;
+    if(num==1) fn=square;
+    else fn=cube;
+    fn(10);
+}
+
+
+Lambda Function -> 
+
+std::function<void

@@ -1,0 +1,184 @@
+#encapsulation : Hide the internal representation of the object from any party/ entity/ 
+                line of code outside the class.
+                you can use data binding to achiece this by simply providing member functions 
+                as layer between data and outside world. 
+
+
+#data binding : The concept of relating/binding member functions with data members
+                if you are putting a function inside a class that function atleast 
+                access one data member of that class
+
+
+#Abstration : HIding the implementation detail of a behavious(function so that)
+                    a) It allows programmers to reimplement a functionalituy in a different way
+                        down the class hierarchy by overriding in child classes                    
+                    b) by using abstraction we can talk in "ABSTRACT" terms while explaning behaviour
+
+#VIRTUAL AND PURE VIRTUAL
+
+    Scenario 1: I want to model some data. Bind members with accessible data members and perform basic operations
+                -Create a simple calsses
+                -Bind data members with memeber functions. Keep all data private.
+
+    Scenario 2: I want to create tyoes and subrypes so that I can generalizw opreralizes or implement specific solutions for
+                specific sub categories. 
+
+            create a parent class and apropriate child classes. Then sk the following questions    
+                a) are all methos implemented in all calsses?
+                    if yes no need for pure virtual functions 
+                b) are we going to cretae objects of multiple child classes and store them together in the same container?
+                    if yeas, we need to use upcasting.
+                    base class methods must be marked as virtual
+                c) Do we need to make the base class abstract/ Do we need to prevent initialization (object creating for abse class?)
+                        -Make sure at least 1 method in the parent is mared as pure virtual 
+                d) I am not sure if methond will be overriden. May be in future but no sure currently
+                    -Make as virtual 
+
+
+
+Tips to write programs:
+    1) Read the problem statement completely twice atleast before doing any thing 
+    2) Header gaurd, compile program only when it is fully completed!
+    3) Always work on individual functions only.
+        Breakdown entire solutions into small small sections!
+    4) Always draw a diagram 
+    5) Spend more time in designing the solution for each functionalities rather than implementing it 
+
+
+Create a banking system where I can record customer details, card details, acc details and cheque details
+Acc may have sub categorie
+
+expected operations are abality to cretae new account,
+find details of an account based on ID, calculate min, max, total or average account balance 
+print details of cheque based on chaeque number
+
+
+ClassA{
+    ...
+    ...
+
+    public:
+        virtual void Display(){
+            std::Cout<<"A Display\n";
+        }
+        void Test(){
+            std::cout<<"A test\n";
+        }
+}
+
+
+ClassB : public classA{
+    ...
+    ...
+
+    public:
+        void display(){
+            std::Cout<<"B Display\n";
+        }
+        void test(){
+            std::cout<<"B test\n";
+        }
+}
+
+Rule1: for a class that contains at aleast 1 virtual method
+    A virtual table is created i memory. 
+    This table has addresses for the virtual methods functions 
+
+Rule2: If a class inherits from a parent class that also contains a vtable, 
+    the child will also implement its own vtable
+
+A* ptr = new B();
+ptr->Display();
+    Step1 -> verify where is Display();
+    -go to class wose type is ptr's type 
+    -go to A class. Verify whether this function 
+    is at least declared in class A 
+    Step2 -> Verify is the method is non virtual. If yes, call the function 
+        if the function is virtual, proceed to step 3
+    Step 3: Now find the type of RHS(Object type). FInd the vtable for object and call function based ON ENTRY IN VTABLE 
+
+
+
+classA VTable 
+[A::Display()::0X10045H]
+0X777H
+[vptr] -> that address is vptr 
+
+
+
+Casting logic 
+    POINTER IS OF PARENT TYPE 
+        1: I want to call function fn. fn exits in the parent and also exits in the child 
+        but fn is non-virtual 
+        you can use ptr->fn() //This will call parent call fn 
+        if you want to call child do DYNAMIC_CAST into child 
+
+        2: I want to call function fn. fn exits in the parent and does not exits in the child 
+        and fn is non-virtual
+        you can use ptr->fn() //This will call parent fn 
+        YOU SHOULD NOT USE DYNAMIC_CAST BECAUSE FN DOES NOT EXIST IN THE CHILD 
+
+        3: I want to call function fn. fn exits in the child and does not exits in the parent 
+        and fn is non-virtual 
+        PARENT POINTER IS PRACTICALLY USELESS 
+        YOU HAVE TO USE DYNAMIC_CAST 
+
+        4: I want to call function fn. fn exits in the parent and also exits in the child 
+        and fn is virtual
+        compiler will call the most derived version of fn FROM THE INHERITANCE HIERARCHY  
+
+
+Lets talk about some errors -> Read errors from top to bottom 
+    1) <Identifier> not declared in scope
+        -Function name being used doest not appear in declared symbols
+        -Variable declared does not appear in available names
+        -Data passing ya function passing mai kuch gadbad hua hai
+    2) Undefined reference to a function 
+        -done declaration but body/defination/implementation is missing 
+    3) Multiple defination <functionName>
+        -defined the function twice  
+    4) Multiple defination/ redefination of class <className>
+        - bina header gaurd ka 2 baar .h ko include kr diye kahi pe 
+    5) too few arguments to function <functionName> 
+        - km arguments pass kiye ho
+    6) too few arguments to function <functionName> 
+        - jayda arguments pass kr dye ho 
+    7) arguments mismatch
+        - manga kuch arguments hai vej kuch or rahe hai function mai 
+    8) no matching function error call
+        - the parameter you have passed for calling the function, 
+            those paramerters are different from the actual parameters in the function 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+VTABLE, DYNAMIC DISPTACH, EXCEPTION HANDLING MOVE SYMANTIC

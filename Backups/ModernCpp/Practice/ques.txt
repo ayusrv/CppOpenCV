@@ -1,0 +1,28 @@
+/*
+Employee---------->Base (Name,Address,Age,Gender,salary, Enum post Employee type) --------->pure virtual function CalculateTaxes()=0;
+|
+|
+|
+|
+|
+|
+Corporate Employee                  Government
+string id                               int id
+overload with 15%of salary          overload with 5%of salary
+ 
+Manager -->May or may not be corporate
+ 
+ 
+ 
+store map of <Employee*,vector<Employee*>>
+ 
+functionalities:-
+ 
+CreateObjects
+user manager Employee average salary
+user id Manager name print if id not found handle it with appropriate exception
+user manager name dega count of employee he manage return
+Employee ka naam manager ki details return Employee* for manager
+manager ka naam ------> generating highest tax amount
+ 
+*/

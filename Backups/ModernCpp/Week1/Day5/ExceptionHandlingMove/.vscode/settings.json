@@ -1,0 +1,9 @@
+{
+    "files.associations": {
+        "exception": "cpp",
+        "new": "cpp",
+        "stdexcept": "cpp",
+        "system_error": "cpp",
+        "typeinfo": "cpp"
+    }
+}

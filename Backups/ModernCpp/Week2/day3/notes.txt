@@ -1,0 +1,19 @@
+/*
+    Function pointer
+    
+    Function Wrapper -> way to capture any callable in a type erased way
+        - It can be used for the following
+            - Pass a calable as a parameter
+            - Return a callable
+            - Save functions as "values" in container/ variables
+    
+    Reference Wrapper -> Object that internally stroes reference "reference to something"
+                        It uses pointer to reference conversion internally
+                        It can be replacement for raw reference everywhere in code
+                        Rvalues cannot be converted to reference wrapper 
+
+    std::bind -> It creates a partial function
+                    A function some oarameters are already fixed
+                    It also allows you to redesign or tweak the sequence of parameters by swapping or repositioning them as per req
+
+*/

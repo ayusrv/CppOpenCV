@@ -1,0 +1,64 @@
+Ways to create threads in C++11
+    1) FUnction Pointers
+    2) Lambda function 
+    3) functors
+    4) Member pointers 
+    5) static member function
+
+
+
+1) WHat are we doing -> 
+    We are trying to do more work in our program per second 
+    I want more efficiency in my program. I wan my hardware better 
+2) HOW?
+    -By using the OS for support. we are requesting OS to run independent sections of my program parallely if possible or concurrently if noting else works out!
+    
+3) Syntax wise what to do 
+    - Each of your independent functions can be treated "logical threads". They can be scheduled by OS if you create a thread object and attach it to one callable with right parameters
+    - Also remember to wait for threads to finish 
+                    OR 
+     Detach from spawned threads
+
+4) Why did you join threads?
+    - Because main thread cannot finish before other threads as spawned threads need to report back to main via signals, If main is already finished, then thread has to because daemon thread(threading running in the background).
+
+5) What is std::thread?
+    - It is a class which is a wrapper around a native platform specific OS-level thread.
+
+6) Can we copy threads?
+    - No, once a mini program is started, copying it mean duplicating and doing the same things
+
+7) Can we make container of threads?
+    - Yes, since thread instaces are objects, you can do this!
+
+8) What is race condition?
+    - 2 or more threads are finghting to perform a write operation on a shared memory
+
+9) What is critical section?
+    - any part of the program where race condition can happen to cause data integrity issue, incoherant output or worse!
+
+10) How to avoid race condition?
+    - TAKE actions to synchornize threads especially for critical section 
+
+11) Syntactically, how to do this?
+    - Choose between the plethora(too many) of available choices for synchornize primitive
+    - mutex: a binary semaphore which need to locked/ unlocked manually
+    - lock_gaurd : which is a scopre based lock tahat uses RAII 
+    - unique_lock : It can be locked/unlocked manually as well as with RAII 
+    - recurssive lock : If you want to use recursive and thread 
+        [WHAT THE HELL ARE YOU DOING THE FOR?]
+    - condition variable - To implemnt synchornization based on Producer/Consumer model 
+
+12) How will I know  which one to choose 
+    - Common sense 
+
+13) WHat is synchronous and asynchronous stuff?
+    - If you start command/instruction N only after command/ instruction
+        N-1 is fully completed, execution is synchronous
+            Else,
+        asynchronous
+
+14) Is async the same async that I learn in JavaScript/ or ther lang 
+    - Yes 
+
+

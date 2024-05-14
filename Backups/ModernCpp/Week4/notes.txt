@@ -1,0 +1,27 @@
+Algorithms covered :
+
+1) std::count_if : count instances matching conditions
+
+2) std::find_if : find the position of the first insatance that satisfies the condition 
+
+3) std::all_of : return true if all of the instances match condition, false otherwise
+
+4) std::any_of : return true if any one of the instances ,atch condition, flase otherwise 
+
+5) std::none_of return true only when NONE of the instances match condition, flase otherwise
+
+6) std::copy : copy all elements for  source and destination unconditionally 
+
+7) std::copy_if copy elements that satisfy condition from source to destination
+    NOTE: remember to set the size, copy_if and then resize using distance 
+
+8) std::accumulate : aggregate multiple elements into 1 by performing a progressive, binary operation of your choice 
+
+9) std::max_element : find the position of the first max element [based om computer]
+
+10) std::min_element : find the position of the first min element [based om computer]
+
+
+
+Problem 1 -> don't remember the syntax properly 
+solution : Never copy the code without understanding the syntax!

@@ -1,0 +1,21 @@
+Command Line (basic usage)
+Git version control 
+Make files and CMake 
+Great understanding of OOP 
+-Effective modern CPP!
+-c++ the complete reference
+
+
+
+topics 
+    1) std::thread one or container 
+    2) std::mutex for race condition
+    3) lock gaurd to manage mutex base scope 
+    4) if-init 
+    5) optional
+    6) structural binding 
+    7) Varients - functional polymorphism (std::visit, std::holds_alternative<>())
+    8) conditional variable - producer consumer problems, notify, unique lock 
+    9) std:async - with future inputs and without future inputs 
+    10) fold expressions
+    11) variadic templates

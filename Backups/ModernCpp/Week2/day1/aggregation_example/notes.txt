@@ -1,0 +1,5 @@
+If you take pointer of calssB in classA we say that classA is composed with classB as a member
+If you take reference of classBin classA we say classA is aggregated with classB 
+
+Composition -> If calssA object is destroyed, attached classB object is also supposed to be Destroyed
+Aggregation -> If classA object is destroyed, attached classB object is not get destroyed 

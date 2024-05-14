@@ -1,0 +1,10 @@
+1) app starts -----> API ID it has to be carried into the second functionalities 
+
+2) netwrok setup : we get ip address and port number, has to be acrried in third function 
+
+3) using network config, setup data transfer to a databse 
+connection will be established 
+    - we get a database connetion cursor object, take this to fn4 
+
+4) using the databse access pointer, write data into database 
+    - use cursor to execute write query

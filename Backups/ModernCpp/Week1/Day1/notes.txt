@@ -1,0 +1,29 @@
+Abstraaction -> Not providing the implemantation delatils so that
+    a) It can be probided at a later point in the code hierarchy
+    b) We can exmplain functionality without significant focus on implemantation details
+
+Inheritance -> Either you specialize the implementation for a specific subcategory or
+                You develop logic which can be genralized to many types
+
+Polumorphism -> 
+
+Encapsulation ->
+
+Composition 
+
+Aggregation
+
+Association
+
+SYLLABUS
+
+Part 1: Essentials of Modern CPP
+        CPP but MODERN STYLE 
+
+Part 2: Functional programming in modern CPP 
+
+Part 3: Concurrency in Modern CPP & CPP17
+
+Part 4: STL ULTRA PRO MAX 
+
+STD MOVE Noexcept Rvalue/LValue/Rfererences

@@ -1,0 +1,153 @@
+#!/bin/bash
+read -p "Enter your choice (1/2/3/4/5/6/7/8/9): " choice
+
+echo "Security Tools installation"
+
+echo "Select a software to install:"
+
+echo "1. Install McAfee"
+
+echo "2. Install CortexXDR"
+
+echo "3. Install Zscaler"
+
+echo "4. Install USB_Block"
+
+echo "5. Install ManageEngine"
+
+echo "6. Install McAfee ENS"
+
+echo "7. Install GlobalProtect 6"
+
+echo "8. Install GlobalProtect 5"
+
+echo "9. Exit"
+
+
+
+
+
+parent_path=$( cd "$(dirname "${BASH_SOURCE[0]}")" ; pwd -P )# To get in the current directory
+
+cd "$parent_path"
+
+
+
+
+
+
+case $choice in
+
+1)
+
+echo "Installing McAfee..."
+
+sudo chmod 777 ~/basebuildlinux/installdeb.sh
+
+sudo ~/basebuildlinux/installdeb.sh -I
+
+;;
+
+2)
+
+echo "Installing Cortex XDR…"
+
+sudo mkdir -p /etc/panw
+
+sudo cp ~/basebuildlinux/cortex.conf /etc/panw/
+
+sudo dpkg -i cortex-8.1.1.112729.deb
+
+sudo /opt/traps/bin/cytool reconnect force 0414bf527934486697bc55a50e5838f4
+
+;;
+
+3)
+
+echo "Installing Zscaler..."
+
+sudo apt install net-tools libqt5dbus5 libqt5core5a libqt5sql5 libqt5sql5-sqlite libqt5webchannel5 libqt5webengine5 libqt5webenginecore5 libqt5webenginewidgets5 libqt5webkit5 libqt5webview5 libqt5widgets5 libnss3-tools libpcap* ca-certificates -y
+
+sudo chmod +x ~/basebuildlinux/Zscaler-linux-1.4.0.79-installer.run
+
+echo  y | sudo ~/basebuildlinux/Zscaler-linux-1.4.0.79-installer.run  --unattendedmodeui none --strictEnforcement 1 --policyToken 363035333A353A39653834303965662D626537372D343035362D393863612D633731373165313737326231 --cloudName zscalerthree --userDomain kpit.com
+
+;;
+
+4)
+
+echo "Installing USB block script..."
+
+sudo chmod 777  ~/basebuildlinux/USB_Block.sh
+
+Sudo ~/basebuildlinux/USB_Block.sh
+
+;;
+
+5)
+
+echo "Installing ManageEngine..."
+
+sudo chmod 777  ~/basebuildlinux/UEMSLinuxAgent/UEMS_LinuxAgent.bin
+
+sudo ~/basebuildlinux/UEMSLinuxAgent/UEMS_LinuxAgent.bin
+
+;;
+
+6)
+
+echo "Installing McAfeeENS..."
+
+sudo ~/basebuildlinux/install-mfetp.sh
+
+;;
+
+7)
+
+echo "Installing Globalprotect5..."
+
+sudo apt-get update
+
+sudo apt-get install  libqt5webkit5 -y
+
+sudo dpkg -i ~/basebuildlinux/GlobalProtect_UI_deb-5.1.4.0-9.deb
+
+;;
+
+8)
+
+echo "Installing Globalprotect6..."
+
+sudo apt-get update
+
+sudo apt-get install  libqt5webkit5 -y
+
+sudo dpkg -i ~/basebuildlinux/GlobalProtect_UI_focal_deb-6.1.0.0-44.deb
+
+;;
+
+9)
+
+echo "Installing GoogleChrome..."
+
+sudo dpkg -i ~/basebuildlinux/google-chrome.deb
+
+;;
+
+10)
+
+echo "Exiting the script."
+
+sudo rm -rf  ~/basebuildlinux
+
+exit 0
+
+;;
+
+*)
+
+echo "Invalid choice. Please enter a valid option (1/2/3/4/5/6/7/8/9/10)."
+
+;;
+
+esac

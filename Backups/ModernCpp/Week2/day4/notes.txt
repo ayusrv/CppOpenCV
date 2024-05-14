@@ -1,0 +1,9 @@
+Objective : Make 3 lambda functions and 1 adapter function in the functionalities section
+
+each lambda takes one vector of integer and returns void 
+the lambda funs are:
+    1) first elemnet 
+    2) last element 
+    3) size of vector 
+
+the adaptor must accept only one lambda at a time along with a container of integer 
