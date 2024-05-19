@@ -32,7 +32,7 @@ int main()
     // cv::bilateralFilter(image, bilateralImage, 15, 95, 45);
 
     // // Creating the Gaussin Blur
-    cv::GaussianBlur(image, gaussianImage, cv::Size(11, 11), 5, 5);
+
 
     // cv::imshow("BIlateral Image", bilateralImage);
     cv::imshow("Image", image);

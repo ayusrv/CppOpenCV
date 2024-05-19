@@ -8,9 +8,9 @@ int main()
     Mat image = imread(fileLocation, IMREAD_UNCHANGED);
     Mat channels[3];
     split(image, channels);
-    Mat blue_image = imread("/home/kpit/opencv/samples/data/baboon.jpg",IMREAD_COLOR);
-    Mat green_image = imread("/home/kpit/opencv/samples/data/baboon.jpg",IMREAD_COLOR);
-    Mat red_image = imread("/home/kpit/opencv/samples/data/baboon.jpg",IMREAD_COLOR);
+    Mat blue_image = channels[0];
+    Mat green_image = channels[1];
+    Mat red_image = channels[2];
 
     imshow("Blue Image", blue_image);
     imshow("Green Image", green_image);

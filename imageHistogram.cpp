@@ -33,7 +33,7 @@ int main()
 
     Mat histImage(histHeight, histWidth, CV_8UC3, Scalar(0,0,0));
 
-    // Normalize histograms to the height of the image
+    // Normalize histograms to the height of the image 
     normalize(channelRed, channelRed, 0, histImage.rows, NORM_MINMAX, -1, Mat());
     normalize(channelGreen, channelGreen, 0, histImage.rows, NORM_MINMAX, -1, Mat());
     normalize(channelBlue, channelBlue, 0, histImage.rows, NORM_MINMAX, -1, Mat());

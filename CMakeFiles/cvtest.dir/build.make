@@ -57,27 +57,27 @@ include CMakeFiles/cvtest.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/cvtest.dir/flags.make
 
-CMakeFiles/cvtest.dir/Padding.cpp.o: CMakeFiles/cvtest.dir/flags.make
-CMakeFiles/cvtest.dir/Padding.cpp.o: Padding.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kpit/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cvtest.dir/Padding.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvtest.dir/Padding.cpp.o -c /home/kpit/test/Padding.cpp
+CMakeFiles/cvtest.dir/DrawingLines.cpp.o: CMakeFiles/cvtest.dir/flags.make
+CMakeFiles/cvtest.dir/DrawingLines.cpp.o: DrawingLines.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kpit/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cvtest.dir/DrawingLines.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cvtest.dir/DrawingLines.cpp.o -c /home/kpit/test/DrawingLines.cpp
 
-CMakeFiles/cvtest.dir/Padding.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvtest.dir/Padding.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kpit/test/Padding.cpp > CMakeFiles/cvtest.dir/Padding.cpp.i
+CMakeFiles/cvtest.dir/DrawingLines.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cvtest.dir/DrawingLines.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kpit/test/DrawingLines.cpp > CMakeFiles/cvtest.dir/DrawingLines.cpp.i
 
-CMakeFiles/cvtest.dir/Padding.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvtest.dir/Padding.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kpit/test/Padding.cpp -o CMakeFiles/cvtest.dir/Padding.cpp.s
+CMakeFiles/cvtest.dir/DrawingLines.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cvtest.dir/DrawingLines.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kpit/test/DrawingLines.cpp -o CMakeFiles/cvtest.dir/DrawingLines.cpp.s
 
 # Object files for target cvtest
 cvtest_OBJECTS = \
-"CMakeFiles/cvtest.dir/Padding.cpp.o"
+"CMakeFiles/cvtest.dir/DrawingLines.cpp.o"
 
 # External object files for target cvtest
 cvtest_EXTERNAL_OBJECTS =
 
-cvtest: CMakeFiles/cvtest.dir/Padding.cpp.o
+cvtest: CMakeFiles/cvtest.dir/DrawingLines.cpp.o
 cvtest: CMakeFiles/cvtest.dir/build.make
 cvtest: /usr/local/lib/libopencv_gapi.so.4.9.0
 cvtest: /usr/local/lib/libopencv_highgui.so.4.9.0

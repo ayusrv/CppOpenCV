@@ -25,6 +25,31 @@ Mat GammaCorrection(Mat image)
     return temp;
 }
 
+Mat HistoGramImage(Mat image)
+{
+    Mat finalImage = image.clone();
+    int histSize = 256;
+    float range[] = {0, 256};
+    const float *histRange[] = {range};
+    int histWidth = 256, histHeight = 400;
+    if (finalImage.channels() < 3)
+    {
+        Mat hist;
+        calcHist(&finalImage, 1, nullptr, Mat(), hist, 1, &histSize, histRange);
+        Mat histImage(histHeight, histWidth, CV_8U, Scalar(0, 0, 0));
+        normalize(histImage, histImage, 1, NORM_MINMAX);
+        for (int i = 1; i < 256; i++)
+        {
+            line(histImage, Point((i - 1), histHeight - (hist.at<float>(i - 1))), Point((i)-histHeight - (hist.at<float>(i))), Scalar(255, 255, 255));
+        }
+        return histImage;
+    }
+    else
+    {
+    }
+    return finalImage;
+}
+
 int main()
 {
     VideoCapture vid;

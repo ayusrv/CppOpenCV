@@ -6,9 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/kpit/test/Padding.cpp
-iostream
--
+/home/kpit/test/DrawingLines.cpp
 opencv2/opencv.hpp
 -
 

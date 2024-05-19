@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/cvtest.dir/Padding.cpp.o"
+  "CMakeFiles/cvtest.dir/DrawingLines.cpp.o"
   "cvtest"
   "cvtest.pdb"
 )

@@ -17,10 +17,25 @@ int main() {
     boxFilter(image, result_replicate, -1, Size(5, 5), Point(-1, -1), true, BORDER_REPLICATE);
     resize(result_reflect, result_reflect, Size(600, 400));
 
+    Mat gaussianImage;
+    cv::GaussianBlur(image, gaussianImage, cv::Size(11, 11), 5, 5);
+
+    Mat medianImage;
+    cv::medianBlur(image, medianImage, 5);
+
+    Mat filterImage;
+    Mat kernal = (Mat_<char>(3,3) << 1, 1, 1, 
+                                     1, 2, 1, 
+                                     1, 1, 1);
+    cv::filter2D(image, filterImage, -1,kernal);
+
     // Display the results
     // imshow("Default Border", result_default);
     imshow("Default Image", image);
     imshow("Reflect Border", result_reflect);
+    imshow("Gaussian Blur", gaussianImage);
+    imshow("Median Blur", medianImage);
+    imshow("Filter 2d", filterImage);
     // imshow("Replicate Border", result_replicate);
 
     // Mat result(500, 500, image.type(), Scalar(0,0,0));
