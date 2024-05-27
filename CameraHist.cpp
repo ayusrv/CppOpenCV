@@ -19,19 +19,6 @@ Mat GammaCorrectin(Mat image, int gammaVal)
     return finalImage;
 }
 
-Mat GammaCorrect(Mat image, int gammaVal)
-{
-    Mat finalImage = image.clone();
-    Mat lutFilter(1, 256, CV_8U);
-    uchar *ptr = lutFilter.ptr();
-    for (int i = 0; i < 256; i++)
-    {
-        ptr[i] = saturate_cast<uchar>(pow((i / 255.0), gammaVal) * 255.0);
-    }
-    LUT(image, lutFilter, finalImage);
-    return finalImage;
-}
-
 Mat Histography(Mat image)
 {
     int histSize = 256, histHeight = 300, histWidth = 256;

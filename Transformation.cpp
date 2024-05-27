@@ -8,10 +8,6 @@ int d = 0;
 int e = 0;
 int f = 0;
 
-void onTrack(int, void *)
-{
-}
-
 int main()
 {
     cv::Mat image = cv::imread("/home/kpit/opencv/samples/data/HappyFish.jpg", cv::IMREAD_GRAYSCALE);
@@ -19,12 +15,12 @@ int main()
 
     cv::namedWindow("Window", cv::WINDOW_AUTOSIZE);
  
-    cv::createTrackbar("shear x ", "Window", &a, 10, onTrack);
-    cv::createTrackbar("scale and rotate x ", "Window", &b, 10, onTrack);
-    cv::createTrackbar("translate x ", "Window", &c, 100, onTrack);
-    cv::createTrackbar("scale and rotate y ", "Window", &d, 10, onTrack);
-    cv::createTrackbar("shear y ", "Window", &e, 10, onTrack);
-    cv::createTrackbar("translate y ", "Window", &f, 100, onTrack);
+    cv::createTrackbar("shear x ", "Window", &a, 10);
+    cv::createTrackbar("scale and rotate x ", "Window", &b, 10);
+    cv::createTrackbar("translate x ", "Window", &c, 100);
+    cv::createTrackbar("scale and rotate y ", "Window", &d, 10);
+    cv::createTrackbar("shear y ", "Window", &e, 10);
+    cv::createTrackbar("translate y ", "Window", &f, 100);
  
 
     while (true)

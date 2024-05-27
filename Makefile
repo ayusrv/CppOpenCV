@@ -123,32 +123,32 @@ cvtest/fast:
 	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/build
 .PHONY : cvtest/fast
 
-DrawingLines.o: DrawingLines.cpp.o
+Remap.o: Remap.cpp.o
 
-.PHONY : DrawingLines.o
+.PHONY : Remap.o
 
 # target to build an object file
-DrawingLines.cpp.o:
-	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/DrawingLines.cpp.o
-.PHONY : DrawingLines.cpp.o
+Remap.cpp.o:
+	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/Remap.cpp.o
+.PHONY : Remap.cpp.o
 
-DrawingLines.i: DrawingLines.cpp.i
+Remap.i: Remap.cpp.i
 
-.PHONY : DrawingLines.i
+.PHONY : Remap.i
 
 # target to preprocess a source file
-DrawingLines.cpp.i:
-	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/DrawingLines.cpp.i
-.PHONY : DrawingLines.cpp.i
+Remap.cpp.i:
+	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/Remap.cpp.i
+.PHONY : Remap.cpp.i
 
-DrawingLines.s: DrawingLines.cpp.s
+Remap.s: Remap.cpp.s
 
-.PHONY : DrawingLines.s
+.PHONY : Remap.s
 
 # target to generate assembly for a file
-DrawingLines.cpp.s:
-	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/DrawingLines.cpp.s
-.PHONY : DrawingLines.cpp.s
+Remap.cpp.s:
+	$(MAKE) -f CMakeFiles/cvtest.dir/build.make CMakeFiles/cvtest.dir/Remap.cpp.s
+.PHONY : Remap.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... cvtest"
-	@echo "... DrawingLines.o"
-	@echo "... DrawingLines.i"
-	@echo "... DrawingLines.s"
+	@echo "... Remap.o"
+	@echo "... Remap.i"
+	@echo "... Remap.s"
 .PHONY : help
 
 

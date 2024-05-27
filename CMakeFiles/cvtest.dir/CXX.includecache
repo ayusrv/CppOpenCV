@@ -6,7 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/home/kpit/test/DrawingLines.cpp
+/home/kpit/test/Remap.cpp
+iostream
+-
 opencv2/opencv.hpp
 -
 

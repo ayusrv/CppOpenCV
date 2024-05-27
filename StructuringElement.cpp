@@ -6,21 +6,13 @@ using namespace cv;
 int main()
 {
     Mat img = imread("j.png", IMREAD_UNCHANGED);
-    resize(img, img, Size(50, 50));
-    Mat kernel = getStructuringElement(MORPH_CROSS, Size(3, 3));
-    Mat newImg = (Mat_<uchar>(5, 5) << 0, 0, 0, 0, 0,
-                  0, 0, 255, 0, 0,
-                  0, 255, 255, 255, 0,
-                  0, 0, 255, 0, 0,
-                  255, 0, 0, 0, 0);
-    std::cout<<newImg<<"\n";
-    Mat naya;
-    dilate(newImg, naya, kernel);
-    std::cout<<naya<<"\n";
+    resize(img, img, Size(500, 500));
+    Mat kernel = getStructuringElement(MORPH_DILATE , Size(5, 5));
     Mat erodedImage, morphologyImage, dilateImage;
-    morphologyEx(img, morphologyImage, MORPH_GRADIENT, kernel);
+    morphologyEx(img, morphologyImage, MORPH_CLOSE, kernel);
     erode(img, erodedImage, kernel);
     dilate(img, dilateImage, kernel);
+    
     imshow("Before", img);
     imshow("Morpho Image", morphologyImage);
     imshow("Erode Image", erodedImage);

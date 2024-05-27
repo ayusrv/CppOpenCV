@@ -12,6 +12,7 @@ int main() {
     Mat result_default, result_reflect, result_replicate;
 
     // Apply box filter with different border types
+    // boxFilter(image, result_default, -1,Size(5,5), Point(-1,-1), true, BORDER_);
     boxFilter(image, result_default, -1, Size(5, 5), Point(-1, -1), true, BORDER_DEFAULT);
     boxFilter(image, result_reflect, -1, Size(5, 5), Point(-1, -1), true, BORDER_REFLECT);
     boxFilter(image, result_replicate, -1, Size(5, 5), Point(-1, -1), true, BORDER_REPLICATE);
@@ -21,7 +22,7 @@ int main() {
     cv::GaussianBlur(image, gaussianImage, cv::Size(11, 11), 5, 5);
 
     Mat medianImage;
-    cv::medianBlur(image, medianImage, 5);
+    cv::medianBlur(image, medianImage, 11);
 
     Mat filterImage;
     Mat kernal = (Mat_<char>(3,3) << 1, 1, 1, 
@@ -32,7 +33,7 @@ int main() {
     // Display the results
     // imshow("Default Border", result_default);
     imshow("Default Image", image);
-    imshow("Reflect Border", result_reflect);
+    imshow("Reflect Border", result_default);
     imshow("Gaussian Blur", gaussianImage);
     imshow("Median Blur", medianImage);
     imshow("Filter 2d", filterImage);
